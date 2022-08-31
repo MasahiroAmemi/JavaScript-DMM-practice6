@@ -44,3 +44,25 @@ function addString(strA) {
 //入力ダイアログで値を入力する
 let promptStr = prompt("何か好きな文字を入力してください。");
 alert(promptStr);
+
+//複数の関数を定義する
+let user_hand = prompt("じゃんけんの手をグー、チョキ、パーから選んでください.");
+alert("あなたの選んだ手は" + user_hand + "です。");
+
+//相手のじゃんけんの手をランダムに選択する関数を追加する
+function getJshand() {
+  let js_hand_num = Math.floor(Math.random() * 3); //グー・チョキ・パーがランダムに表示される
+  let js_hand = '';
+
+  if(js_hand_num == 0) {
+    js_hand = "グー";
+  } else if(js_hand_num == 1) {
+    js_hand = "チョキ";
+  } else if(js_hand_num == 2) {
+    js_hand = "パー"
+  }
+  //ランダム生成された数値を基に条件分岐させて、グー・チョキ・パーを出し分ける。
+  return js_hand; //最後に関数の戻り値として、グー・チョキ・パーの文字列を返します。
+}
+
+
