@@ -129,3 +129,22 @@ function winLose(user, js){
   return winLoseStr;
 }
 
+//無名関数の記述
+const myfunc = function(name) {
+  return "${name}さん、こんにちは!";
+}
+console.log(myfunc(name));
+
+//即時関数の基本文
+(function(引数) {
+  //処理
+}("hoge"));
+
+//戻り値
+let result = (function(param1, param2) {
+  return param1 + param2;
+}(1,2));
+console.log(result); //3が出力される。
+
+
+
