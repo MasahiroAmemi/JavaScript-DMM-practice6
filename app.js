@@ -146,5 +146,21 @@ let result = (function(param1, param2) {
 }(1,2));
 console.log(result); //3が出力される。
 
+//countをローカル変数として扱い、即時関数とオブジェクトリテラルで作成
+var counter = (function () {
+	//プライベートにしたいプロパティ
+	var count = 0;
+  return {
+	  //加算メソッド
+	  increment: function () {
+	    count += 1;
+      console.log(count);
+    }
+	};
+}());
 
+counter.increment(); //1が出力される
+counter.increment(); //2が出力される
+
+console.log(counter.count); //※undefined
 
