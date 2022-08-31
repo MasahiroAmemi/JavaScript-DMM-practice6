@@ -19,3 +19,9 @@ function 関数名(引数) {
   return 戻り値;
 }
 
+//関数の記述　例
+function addString(strA) {
+  let addStr = "Hello" + strA;
+  return addStr;
+}
+
